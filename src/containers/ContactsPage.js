@@ -7,7 +7,19 @@ export default function ContactsPage(props) {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
-  const [isCopy, seytIsCopy] = useState(false);
+  const [isCopy, setIsCopy] = useState(false);
+
+  // Checking for name duplicates
+  useEffect(() => {
+    for (contact of props.contacts) {
+      if (name === contact.name) {
+        setIsCopy(true);
+      } else {
+        ssetIsCopy(false);
+      }
+    }
+  }, [name]);
+
   return (
     <div>
       <section>
