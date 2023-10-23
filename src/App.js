@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   RouterProvider,
   createBrowserRouter,
@@ -11,6 +11,16 @@ import ContactsPage from "./containers/ContactsPage";
 import AppointmentsPage from "./containers/AppointmentsPage";
 
 export default function App() {
+  const [contacts, setContacts] = useState([]);
+  const [appointments, setAppointments] = useState([]);
+
+  const addContact = (name, phone, email) => {
+    setContacts([{ name, phone, email }, ...contacts]);
+  };
+
+  const addAppointment = (name, contact, date, time) => {
+    setAppointments([{ name, contact, date, time }, ...appointments]);
+  };
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<Root />}>
