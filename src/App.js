@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import {
   RouterProvider,
   createBrowserRouter,
@@ -21,12 +21,24 @@ export default function App() {
   const addAppointment = (name, contact, date, time) => {
     setAppointments([{ name, contact, date, time }, ...appointments]);
   };
+
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<Root />}>
         <Route index element={<Navigate to={"/contacts"} replace />} />
-        <Route path={"/contacts"} element={<ContactsPage />} />
-        <Route path={"/appointments"} element={<AppointmentsPage />} />
+        <Route
+          path={"/contacts"}
+          element={<ContactsPage contacts={contacts} addContact={addContact} />}
+        />
+        <Route
+          path={"/appointments"}
+          element={
+            <AppointmentsPage
+              apppointments={appointments}
+              addAppointment={addAppointment}
+            />
+          }
+        />
       </Route>
     )
   );
