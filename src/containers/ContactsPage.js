@@ -3,7 +3,11 @@ import React, { useState } from "react";
 import ContactForm from "../components/ContactFrom";
 import TileList from "../components/TileList";
 
-export default function ContactsPage() {
+export default function ContactsPage(props) {
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
+  const [isCopy, seytIsCopy] = useState(false);
   return (
     <div>
       <section>
