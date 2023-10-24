@@ -14,3 +14,38 @@ a {
 a.active {
   text-decoration: underline;
 }
+
+h2 {
+  margin: 0;
+  padding: 30px 15px 10px;
+}
+
+/* Form */
+
+form {
+  padding: 10px 20px;
+}
+
+label {
+  display: block;
+  padding: 7px 0;
+}
+
+button {
+  margin-top: 20px;
+}
+
+/* Contact */
+
+.contact {
+  border-bottom: 2px solid lightblue;
+  padding: 10px;
+}
+.contact p {
+  padding: 5px;
+  margin: 2px;
+}
+
+.tile_email {
+  margin-bottom: 10px;
+}

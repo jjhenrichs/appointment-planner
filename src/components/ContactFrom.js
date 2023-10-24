@@ -15,8 +15,10 @@ export default function ContactForm({
       <input
         type="text"
         label="name"
+        id="name"
         value={name}
         onChange={({ target }) => setName(target.value)}
+        autoComplete="name"
         required
       />
       <br />
@@ -24,9 +26,11 @@ export default function ContactForm({
       <input
         type="tel"
         aria-label="phone"
+        id="phone"
         value={phone}
         onChange={({ target }) => setPhone(target.value)}
         patten="(\d{3})-(\d{3})-(\d{4})"
+        autoComplete="tel"
         required
       />
       <br />
@@ -34,8 +38,10 @@ export default function ContactForm({
       <input
         type="email"
         aria-label="email"
+        id="email"
         value={email}
         onChange={({ target }) => setEmail(target.value)}
+        autoComplete="email"
         required
       />
       <br />

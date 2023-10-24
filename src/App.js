@@ -11,7 +11,10 @@ import ContactsPage from "./containers/ContactsPage";
 import AppointmentsPage from "./containers/AppointmentsPage";
 
 export default function App() {
-  const [contacts, setContacts] = useState([]);
+  const [contacts, setContacts] = useState([
+    { name: "John Doe", phone: "123-456-7890", email: "johndoe@gmail.com" },
+    { name: "Tommy Tutone", phone: "443-867-5309", email: "ttutone@gmail.com" },
+  ]);
   const [appointments, setAppointments] = useState([]);
 
   const addContact = (name, phone, email) => {
