@@ -11,14 +11,12 @@ export default function ContactsPage({ contacts, addContact }) {
 
   // Checking for name duplicates
   useEffect(() => {
-    for (const contact of contacts) {
-      if (name === contact.name) {
-        setIsCopy(true);
-      } else {
-        setIsCopy(false);
-      }
+    if (checkNameCopy()) {
+      setIsCopy(true);
+    } else {
+      setIsCopy(false);
     }
-  }, [name]);
+  }, [name, contacts, isCopy]);
 
   // Adds a new contact given the name is not a duplicate
   const handleSubmit = (e) => {
@@ -28,6 +26,18 @@ export default function ContactsPage({ contacts, addContact }) {
       setName("");
       setPhone("");
       setEmail("");
+    } else {
+      alert(`The name ${name} is already in contacts`);
+    }
+  };
+
+  //Check for name duplicates
+  const checkNameCopy = () => {
+    const found = contacts.find((contact) => contact.name === name);
+    if (found !== undefined) {
+      return true;
+    } else {
+      return false;
     }
   };
 

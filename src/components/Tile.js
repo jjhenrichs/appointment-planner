@@ -1,11 +1,11 @@
 import React from "react";
 
-export default function Tile({ key, name, description }) {
+export default function Tile({ id, name, description }) {
   return (
-    <div class="contact" id={key}>
-      <p class="tile_title">{name}</p>
-      <p class="tile_phone">{description.phone}</p>
-      <p class="tile_email">{description.email}</p>
+    <div className="contact" id={`contact-${id}`}>
+      <p className="tile_title">{name}</p>
+      <p className="tile_phone">{description.phone}</p>
+      <p className="tile_email">{description.email}</p>
     </div>
   );
 }
