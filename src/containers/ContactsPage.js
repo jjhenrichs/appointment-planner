@@ -9,6 +9,16 @@ export default function ContactsPage({ contacts, addContact }) {
   const [email, setEmail] = useState("");
   const [isCopy, setIsCopy] = useState(false);
 
+  //Check for name duplicates
+  const checkNameCopy = () => {
+    const found = contacts.find((contact) => contact.name === name);
+    if (found !== undefined) {
+      return true;
+    } else {
+      return false;
+    }
+  };
+
   // Checking for name duplicates
   useEffect(() => {
     if (checkNameCopy()) {
@@ -28,16 +38,6 @@ export default function ContactsPage({ contacts, addContact }) {
       setEmail("");
     } else {
       alert(`The name ${name} is already in contacts`);
-    }
-  };
-
-  //Check for name duplicates
-  const checkNameCopy = () => {
-    const found = contacts.find((contact) => contact.name === name);
-    if (found !== undefined) {
-      return true;
-    } else {
-      return false;
     }
   };
 
