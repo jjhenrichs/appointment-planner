@@ -19,7 +19,7 @@ Coming soon
 
 ## Demo
 
-Live demo [here](https://653818dd72e54c00a28dd055--majestic-dragon-09e4a2.netlify.app/contacts)
+Live demo [here](https://majestic-dragon-09e4a2.netlify.app/)
 
 ## Lessons Learned
 
