@@ -37,6 +37,7 @@ export default function App() {
           path={"/appointments"}
           element={
             <AppointmentsPage
+              contacts={contacts}
               apppointments={appointments}
               addAppointment={addAppointment}
             />
