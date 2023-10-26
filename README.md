@@ -15,7 +15,8 @@ This React project manages contacts and appointments.
 
 ## Screenshots
 
-Coming soon
+![alt text](./public/images/screenshot_1.png)
+![alt text](./public/images/screenshot_2.png)
 
 ## Demo
 
@@ -30,7 +31,7 @@ Live demo [here](https://majestic-dragon-09e4a2.netlify.app/)
 
 ## Project Status
 
-Currently completed. Implementing unit testing.
+Currently completed, but may implement unit testing.
 
 ## Acknowledgements
 
