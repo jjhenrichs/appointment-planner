@@ -28,23 +28,32 @@ export default function AppointmentForm({
         name="title"
         value={title}
         onChange={({ target }) => setTitle(target.value)}
+        required
+      />
+      <label htmfor="contact">Contacts:</label>
+      <ContactPicker
+        contacts={contacts}
+        setContact={setContact}
+        name="contact"
       />
       <label htmlFor="date">Date:</label>
       <input
-        type="text"
+        type="date"
         id="date"
         name="date"
         min={getTodayString()}
         value={date}
         onChange={({ target }) => setDate(target.value)}
+        required
       />
       <label htmlFor="time">Time:</label>
       <input
-        type="text"
+        type="time"
         id="time"
         name="time"
         value={time}
         onChange={({ target }) => setTime(target.value)}
+        required
       />
       <br />
       <button type="submit">Submit</button>

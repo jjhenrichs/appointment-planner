@@ -30,7 +30,7 @@ Live demo [here](https://majestic-dragon-09e4a2.netlify.app/)
 
 ## Project Status
 
-Currently working regex pattern matching with the contact form. Next step is to implement everything into the appointments page.
+Currently completed. Implementing unit testing.
 
 ## Acknowledgements
 
