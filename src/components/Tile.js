@@ -1,11 +1,13 @@
 import React from "react";
 
-export default function Tile({ id, name, description }) {
+export default function Tile({ tile }) {
   return (
-    <div className="contact" id={`contact-${id}`}>
-      <p className="tile_title">{name}</p>
-      <p className="tile_phone">{description.phone}</p>
-      <p className="tile_email">{description.email}</p>
+    <div className="tile-container">
+      {Object.values(tile).map((item, index) => (
+        <p key={index} className={`${index === 0 ? "tile-title" : ""} tile`}>
+          {item}
+        </p>
+      ))}
     </div>
   );
 }

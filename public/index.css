@@ -46,6 +46,15 @@ button {
   margin: 2px;
 }
 
-.tile_email {
+.tile-title {
+  font-weight: 800;
+}
+
+.tile {
   margin-bottom: 10px;
+}
+
+.tile-container {
+  border-bottom: 1px solid lightblue;
+  padding: 10px 20px;
 }

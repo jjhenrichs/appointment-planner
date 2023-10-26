@@ -1,15 +1,12 @@
 import React from "react";
 import Tile from "./Tile";
 
-export default function TileList({ contacts }) {
+export default function TileList({ tiles }) {
   return (
     <div>
-      {contacts.map((contact, item) => {
-        const { name, ...description } = contact;
-        return (
-          <Tile id={item} key={item} name={name} description={description} />
-        );
-      })}
+      {tiles.map((tile, index) => (
+        <Tile key={index} tile={tile} />
+      ))}
     </div>
   );
 }

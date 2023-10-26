@@ -15,14 +15,16 @@ export default function App() {
     { name: "John Doe", phone: "123-456-7890", email: "johndoe@gmail.com" },
     { name: "Tommy Tutone", phone: "443-867-5309", email: "ttutone@gmail.com" },
   ]);
-  const [appointments, setAppointments] = useState([]);
+  const [appointments, setAppointments] = useState([
+    { title: "X", contact: "Jeff Henrichs", date: "10-26-2023", time: "1:00" },
+  ]);
 
   const addContact = (name, phone, email) => {
     setContacts([{ name, phone, email }, ...contacts]);
   };
 
-  const addAppointment = (name, contact, date, time) => {
-    setAppointments([{ name, contact, date, time }, ...appointments]);
+  const addAppointment = (title, contact, date, time) => {
+    setAppointments([{ title, contact, date, time }, ...appointments]);
   };
 
   const router = createBrowserRouter(
@@ -38,7 +40,7 @@ export default function App() {
           element={
             <AppointmentsPage
               contacts={contacts}
-              apppointments={appointments}
+              appointments={appointments}
               addAppointment={addAppointment}
             />
           }
