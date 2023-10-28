@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import ContactForm from "../components/ContactFrom";
+import ContactForm from "../components/ContactForm";
 import TileList from "../components/TileList";
 
 export default function ContactsPage({ contacts, addContact }) {
